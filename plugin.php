@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'clonemeagain:indicatenotyours', // notrans
+    'id' => 'clonemeagain:indicatenotyours', // notrans
     'version' => '0.1',
     'name' => 'Ticket View: Indicate Not Yours',
     'author' => 'clonemeagain@gmail.com',
