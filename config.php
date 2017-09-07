@@ -39,7 +39,7 @@ class IndicateNotYoursPluginConfig extends PluginConfig
             ]),
             'warning-background' => new TextboxField([
                 'label' => $__('Warning background color'),
-                'hint' => $__('Default is #FF23B6'),
+                'hint' => $__('Default is #FF23B6, any CSS compatible color works.'),
                 'default' => '#FF23B6'
             ])
         ];

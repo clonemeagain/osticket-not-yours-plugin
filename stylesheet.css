@@ -1,0 +1,14 @@
+#plugin-nyt {
+	position: absolute;
+	top: 50%;
+	float: right;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+	font-size: 3em;
+	border: 10px dotted #FF23B6;
+	padding: 20px;
+	text-align: center;
+	z-index:1;
+}
