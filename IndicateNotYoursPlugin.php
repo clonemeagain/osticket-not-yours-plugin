@@ -24,9 +24,6 @@ class IndicateNotYoursPlugin extends Plugin {
         "To use plugin Indicate Not Yours, you need to enable the Attachment Preview Plugin");
       return;
     }
-    else {
-      error_log("Loading plugin not-yours");
-    }
     
     // Probably more efficient to see if we can even use it first, then build stuff:
     if (! AttachmentPreviewPlugin::isTicketsView()) {
@@ -51,7 +48,7 @@ class IndicateNotYoursPlugin extends Plugin {
     $script = str_replace(array_keys($replace), array_values($replace), $script);
     
     // Send to browser
-    AttachmentPreviewPlugin::add_script($script);
+    AttachmentPreviewPlugin::add_arbitrary_script($script);
   }
 
   /**
