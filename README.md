@@ -7,7 +7,7 @@ Just install/enable and watch the colours fly!
 
 Uses injected javascript to edit a page if the ticket you are viewing has been assigned to another agent. 
 
-TODO: Make the fuscia colour admin-editable. 
+The fuscia colour is admin-editable. (Can change warning and normal background colours, the warning is used for the background and flashing notice). 
 
 # Relies on 
 https://github.com/clonemeagain/attachment_preview

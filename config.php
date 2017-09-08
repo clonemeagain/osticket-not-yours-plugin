@@ -3,6 +3,7 @@ require_once INCLUDE_DIR . 'class.plugin.php';
 
 class IndicateNotYoursPluginConfig extends PluginConfig
 {
+
     // Provide compatibility function for versions of osTicket prior to
     // translation support (v1.9.4)
     function translate()
@@ -23,18 +24,24 @@ class IndicateNotYoursPluginConfig extends PluginConfig
     /**
      * Build an Admin settings page.
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see PluginConfig::getOptions()
      */
     function getOptions()
     {
         list ($__, $_N) = self::translate();
-        return array(
-            'indicate-not-yours' => new SectionBreakField(array(
-                'label' => $__('To whom should we alert garishly?'),
-                'description' => $__('Only makes sense to indicate this to Agents, setting disabled. To disable, simply disable plugin.'),
-            )),
-        );
+        return [
+            'normal-background' => new TextboxField([
+                'label' => $__('Normal background color'),
+                'hint' => $__('Default is #EEE'),
+                'default' => '#EEE'
+            ]),
+            'warning-background' => new TextboxField([
+                'label' => $__('Warning background color'),
+                'hint' => $__('Default is #FF23B6, any CSS compatible color works.'),
+                'default' => '#FF23B6'
+            ])
+        ];
     }
 }
